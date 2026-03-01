@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NPC_Paper
   - NPC_Plastic
+  - NPC_Glass
   layers:
   - Default
   - TransparentFX
