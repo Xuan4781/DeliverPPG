@@ -5,7 +5,7 @@ public class Item : MonoBehaviour
     public ItemData data;
     public virtual void PickUp()
     {
-        Debug.log("Picked up: " data.itemName);
+        Debug.Log("Picked up: " + data.itemName);
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
