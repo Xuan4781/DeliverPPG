@@ -37,6 +37,11 @@ public class PlayerController : MonoBehaviour
         //let player pick up item using E
         if(Input.GetKeyDown(KeyCode.E))
         {
+            if (!string.IsNullOrEmpty(currentItemData.itemType))
+            {
+                Debug.Log("Already holding an item!");
+                return;
+            }
             Collider[] hits = Physics.OverlapSphere(transform.position, 2f);
             foreach( var hit in hits)
             {
