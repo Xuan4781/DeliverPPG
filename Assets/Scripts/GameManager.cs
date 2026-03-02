@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI resultText;
+    public TextMeshProUGUI playerMessageText;
 
     private bool gameOver = false;
 
@@ -56,6 +57,19 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+    }
+
+    public void ShowMessage(string message, float duration = 2f)
+    {
+        StopAllCoroutines();
+        StartCoroutine(ShowMessageCoroutine(message, duration));
+    }
+
+    private System.Collections.IEnumerator ShowMessageCoroutine(string message, float duration)
+    {
+        playerMessageText.text = message;
+        yield return new WaitForSeconds(duration);
+        playerMessageText.text = "";
     }
 
     public void AddScore(int amount)

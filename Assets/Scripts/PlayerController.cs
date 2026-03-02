@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
         {
             if (!string.IsNullOrEmpty(currentItemData.itemType))
             {
-                Debug.Log("Already holding an item!");
+                GameManager.Instance.ShowMessage("Already holding an item!");
                 return;
             }
             Collider[] hits = Physics.OverlapSphere(transform.position, 2f);
@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
                     currentItemData = item.data;
                     item.PickUp();
                     Destroy(item.gameObject);
-                    Debug.Log("Picked up: " + currentItemData.itemName);
+                    GameManager.Instance.ShowMessage($"YOU GOT {currentItemData.itemName.ToUpper()}! DELIVER TO THE CORRECT NPC");
                     break; // one item at once
                 }
             }
@@ -66,21 +66,21 @@ public class PlayerController : MonoBehaviour
                 if (hit.CompareTag("NPC_Paper") && currentItemData.itemType == "Paper")
                 {
                     GameManager.Instance.AddScore(currentItemData.pointValue);
-                    Debug.Log("Delivered Paper! +1 point");
+                    GameManager.Instance.ShowMessage("YAY! Delivered PAPER +1 point");
                     currentItemData = new ItemData();
                     break;
                 }
                 else if (hit.CompareTag("NPC_Plastic") && currentItemData.itemType == "Plastic")
                 {
                     GameManager.Instance.AddScore(currentItemData.pointValue);
-                    Debug.Log("Delivered Plastic! +1 point");
+                    GameManager.Instance.ShowMessage("YAY! Delivered PLASTIC +1 point");
                     currentItemData = new ItemData(); // reset
                     break;
                 }
                 else if (hit.CompareTag("NPC_Glass") && currentItemData.itemType == "Glass")
                 {
                     GameManager.Instance.AddScore(currentItemData.pointValue);
-                    Debug.Log("Delivered Glass! +1 point");
+                    GameManager.Instance.ShowMessage("YAY! Delivered GLASS +1 point");
                     currentItemData = new ItemData(); // reset
                     break;
                 }
@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour
                 {
                     // Delivered wrong -1 point
                     GameManager.Instance.AddScore(-1);
-                    Debug.Log("Wrong delivery! -1 point");
+                    GameManager.Instance.ShowMessage("OOPS! Wrong delivery -1 point");
                     currentItemData = new ItemData(); // reset
                     break;
                 }
