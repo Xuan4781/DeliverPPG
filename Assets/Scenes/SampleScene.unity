@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 89896496}
   - component: {fileID: 89896495}
   - component: {fileID: 89896494}
+  - component: {fileID: 89896498}
   m_Layer: 0
   m_Name: Item_Plastic
   m_TagString: Untagged
@@ -231,6 +232,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &89896498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89896493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e6b9230a6dea04cbfbc3a78b705d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlasticItem
+  data:
+    itemName: Plastic
+    itemType: Plastic
+    pointValue: 1
 --- !u!1 &319983706
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,6 +791,7 @@ GameObject:
   - component: {fileID: 504929549}
   - component: {fileID: 504929548}
   - component: {fileID: 504929547}
+  - component: {fileID: 504929551}
   m_Layer: 0
   m_Name: Item_Glass
   m_TagString: Untagged
@@ -874,6 +892,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &504929551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504929546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18f4b4079f840f4eac1876804c695e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GlassItem
+  data:
+    itemName: Glass
+    itemType: Glass
+    pointValue: 1
 --- !u!1 &674295836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1371,6 +1405,7 @@ GameObject:
   - component: {fileID: 1577502326}
   - component: {fileID: 1577502325}
   - component: {fileID: 1577502324}
+  - component: {fileID: 1577502328}
   m_Layer: 0
   m_Name: Item_Paper
   m_TagString: Untagged
@@ -1471,6 +1506,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1577502328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577502323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e05e703fcf892024fa1f292301edfaa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PaperItem
+  data:
+    itemName: Paper
+    itemType: Paper
+    pointValue: 1
 --- !u!1 &1751898287
 GameObject:
   m_ObjectHideFlags: 0
